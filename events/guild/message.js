@@ -12,6 +12,16 @@ module.exports = (Discord, client, receivedMessage) =>{
         client.commands.get('bottagreply').execute(client, receivedMessage, args, Discord);
     }
     
+    if(receivedMessage.channel.type === 'dm'){
+        client.commands.get('dm').execute(client, receivedMessage,command, args, Discord);
+    }
+
+    if(receivedMessage.channel.type != 'dm'){
+    const channel = receivedMessage.guild.channels.cache.find(c => c.name === 'ai-chat');
+    if(receivedMessage.channel === channel){
+        client.commands.get('ai-chat').execute(client, receivedMessage,command, args, Discord);
+    }}
+    
     if(!receivedMessage.content.startsWith(prefix) || !cmd) return;
 
 	try {

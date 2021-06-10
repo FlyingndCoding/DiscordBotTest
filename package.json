@@ -1,8 +1,12 @@
 {
   "name": "DiscordBot3",
   "version": "1.0.0",
-  "description": "",
+  "description": "blep blep",
   "main": "my_bot.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TaimHu/DiscordBotTest"
+  },
   "scripts": {
     "start": "node your-script.js"
   },
@@ -11,12 +15,20 @@
   "license": "ISC",
   "dependencies": {
     "better-sqlite3": "^7.3.1",
+    "cheerio": "^1.0.0-rc.9",
+    "cleverbot-api-node": "0.0.4",
     "country-code-lookup": "0.0.19",
     "discord-prefix": "^2.0.0",
     "discord.js": "^12.5.3",
     "dotenv": "^9.0.0",
+    "erela.js": "^2.3.3",
+    "fotology": "^1.2.2",
+    "fotology-x": "^1.2.4",
     "moment": "^2.29.1",
     "moment-timezone": "^0.5.33",
+    "node-fetch": "^2.6.1",
+    "random-animals-api": "^1.2.6",
+    "request": "^2.88.2",
     "weather-js": "^2.0.0"
   }
 }

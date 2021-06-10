@@ -4,9 +4,10 @@ module.exports = {
     permissions: [],
     description: 'creates a suggestion!',
     execute(client, receivedMessage,command, args, Discord){
+        
         const channel = receivedMessage.guild.channels.cache.find(c => c.name === 'suggestions');
-        if(!channel) return receivedMessage.channel.send('suggestions channel does not exist!');
-
+        if(!channel) return receivedMessage.channel.send('suggestions channel does not exist.')
+        
         let messageArgs = args.join(' ');
         const embed = new Discord.MessageEmbed()
         .setColor('FADF2E')

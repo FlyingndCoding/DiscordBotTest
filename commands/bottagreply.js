@@ -12,7 +12,7 @@ module.exports = {
 
             setTimeout(() => {
                 var embed = new Discord.MessageEmbed()
-                    .setDescription('Current Prefix : ' + process.env.PREFIX)
+                    .setDescription('Current Prefix : ' + process.env.PREFIX + '\nYou can make an ai-chat channel to activate chatbot')
                 msg.edit(embed)
             }, 5000)
 

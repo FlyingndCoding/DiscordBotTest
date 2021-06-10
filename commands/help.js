@@ -6,22 +6,22 @@ module.exports = {
     description: 'this is help command',
     execute(client, receivedMessage, command, args, Discord) {
 
-        const helpFiles = fs.readdirSync('./commands/help/').filter(file => file.endsWith('.js'));
-        for (const file of helpFiles) {
-            const helpcommand = require(`../commands/help/${file}`);
-            if (helpcommand.name) {
-                client.commands.set(helpcommand.name, helpcommand);
-            } else {
-                continue;
-            }
-        }
+        // const helpFiles = fs.readdirSync('./commands/help/').filter(file => file.endsWith('.js'));
+        // for (const file of helpFiles) {
+        //     const helpcommand = require(`../commands/help/${file}`);
+        //     if (helpcommand.name) {
+        //         client.commands.set(helpcommand.name, helpcommand);
+        //     } else {
+        //         continue;
+        //     }
+        // }
 
         var sendertag = receivedMessage.member.user.tag
         const embed = new MessageEmbed()
             .setTitle("Help Panel")
             .setDescription("Avialable commands")
             .setFooter("Requested by: " + sendertag + "\t\tPage 1")
-            .addField("Commands: ", "T help \nT ping \nT suggestions or T suggest")
+            .addField("Commands: ", "T help \nT ping \nT suggestions or T suggest \nT animals \nT List \nT announce")
             //\nT weather <city,country> \nT time \nT channel")
             .setThumbnail("https://www.prensario.net/Multimedios/imgs/43206_750.jpg")
         

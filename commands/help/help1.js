@@ -10,7 +10,7 @@ module.exports = {
             .setTitle("Help Panel")
             .setDescription("Avialable commands")
             .setFooter("Requested by: " + sendertag + "\t\tPage 1")
-            .addField("Commands: ", "T help \nT ping \nT suggestions or T suggest")
+            .addField("Commands: ", "Commands: ", "T help \nT ping \nT suggestions or T suggest \nT animals \nT List \nT announce")
             //\nT weather <city,country> \nT time \nT channel")
             .setThumbnail("https://www.prensario.net/Multimedios/imgs/43206_750.jpg")
         receivedMessage.channel.send(embed).then((msg) => {
@@ -35,7 +35,7 @@ module.exports = {
                         setTimeout(() => {
                             msg.delete()
                         }, 5000)
-
+                        
                         setTimeout(() => {
 
                             client.commands.get('help1').execute(client, receivedMessage, args, Discord);
