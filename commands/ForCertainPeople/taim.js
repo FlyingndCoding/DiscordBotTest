@@ -4,7 +4,7 @@ module.exports = {
     description: 'this is a taim command',
     execute(client, receivedMessage,command, args, Discord){
         
-        if(receivedMessage.author.id != '717928516938629123') return receivedMessage.channel.send('Lol this command is not for you.')
+        if(receivedMessage.author.id != '\\ADD THE ID OF THAT ONE PERSON FROM DISCORD\\') return receivedMessage.channel.send('Lol this command is not for you.')
         
         
         fetch(`https://complimentr.com/api`)
