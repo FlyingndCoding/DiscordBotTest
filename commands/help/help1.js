@@ -10,12 +10,13 @@ module.exports = {
             .setTitle("Help Panel")
             .setDescription("Avialable commands")
             .setFooter("Requested by: " + sendertag + "\t\tPage 1")
-            .addField("Commands: ", "Commands: ", "T help \nT ping \nT suggestions or T suggest \nT animals \nT List \nT announce")
+            .addField("Commands: ", "T help \nT ping \nT suggestions or T suggest \nT animals \nT List \nT announce")
             //\nT weather <city,country> \nT time \nT channel")
             .setThumbnail("https://www.prensario.net/Multimedios/imgs/43206_750.jpg")
         receivedMessage.channel.send(embed).then((msg) => {
-            msg.react('➡️')
             msg.react('⬅️')
+            msg.react('➡️')
+            
 
             const filter = (r, u) => (r.emoji.name === '➡️' || r.emoji.name === '⬅️') && u == receivedMessage.author
             const collector = msg.createReactionCollector(filter);

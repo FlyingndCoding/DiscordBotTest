@@ -13,8 +13,8 @@ module.exports = {
             .addField("Commands: ", "T weather <city,country> \nT time \nT channel \nT reply <Add your message> \nT insult \nT passwordgen")
             .setThumbnail("https://www.prensario.net/Multimedios/imgs/43206_750.jpg")
         receivedMessage.channel.send(embed).then((msg) => {
-            msg.react('➡️')
             msg.react('⬅️')
+            msg.react('➡️')
 
             const filter = (r, u) => (r.emoji.name === '➡️' || r.emoji.name === '⬅️') && u == receivedMessage.author
             const collector = msg.createReactionCollector(filter);
